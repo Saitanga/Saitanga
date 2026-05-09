@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Developer Portfolio — Cyberpunk & Anime Inspired" />
+  <title>DAVES.DEV // Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-glitch" data-text="INITIALIZING...">INITIALIZING...</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+    <div class="loader-sub">LOADING PORTFOLIO SYSTEM v2.0.77</div>
+  </div>
+  <div class="scan-line"></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- PARTICLES -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo"><span class="neon-cyan">D</span>AVES<span class="neon-yellow">.</span>DEV</div>
+  <div class="nav-links">
+    <a href="#about">ABOUT</a>
+    <a href="#stack">STACK</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#stats">STATS</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <a href="#about">ABOUT</a>
+  <a href="#stack">STACK</a>
+  <a href="#projects">PROJECTS</a>
+  <a href="#stats">STATS</a>
+  <a href="#contact">CONTACT</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-cityscape"></div>
+  <div class="hud-corner hud-tl"></div>
+  <div class="hud-corner hud-tr"></div>
+  <div class="hud-corner hud-bl"></div>
+  <div class="hud-corner hud-br"></div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">// DEVELOPER PROFILE LOADED</div>
+      <h1 class="hero-name">
+        <span class="glitch" data-text="DAVES">DAVES</span>
+        <span class="hero-surname neon-cyan">ANDREW</span>
+      </h1>
+      <div class="hero-typed-wrap">
+        <span class="typed-prefix">&gt; </span>
+        <span id="typed-text"></span>
+        <span class="typed-cursor">_</span>
+      </div>
+      <p class="hero-desc">
+        Building digital realities at the intersection of logic and aesthetics.
+        Full-stack developer with a passion for clean systems and sharp interfaces.
+      </p>
+      <div class="hero-socials">
+        <a href="#" class="social-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="#" class="social-btn discord-btn" aria-label="Discord">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+          Discord
+        </a>
+      </div>
+      <div class="hero-cta-wrap">
+        <a href="#projects" class="btn-primary">VIEW PROJECTS</a>
+        <a href="#contact" class="btn-secondary">CONTACT ME</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="avatar-wrap">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-hex">
+          <div class="avatar-img">
+            <!-- SVG Avatar placeholder -->
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="100" fill="#0d0d0f"/>
+              <circle cx="100" cy="85" r="38" fill="#1a1a2e"/>
+              <rect x="40" y="145" width="120" height="80" rx="60" fill="#1a1a2e"/>
+              <circle cx="100" cy="85" r="35" fill="#0f3460"/>
+              <circle cx="88" cy="82" r="5" fill="#00f5ff"/>
+              <circle cx="112" cy="82" r="5" fill="#00f5ff"/>
+              <rect x="88" y="96" width="24" height="3" rx="1.5" fill="#00f5ff" opacity="0.6"/>
+              <path d="M65 150 Q100 135 135 150" stroke="#00f5ff" stroke-width="2" fill="none" opacity="0.5"/>
+              <!-- Cyberpunk markings -->
+              <line x1="60" y1="70" x2="75" y2="75" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
+              <line x1="140" y1="70" x2="125" y2="75" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="avatar-scan"></div>
+        <div class="avatar-label">[ ONLINE ]</div>
+      </div>
+      <div class="hero-stats-mini">
+        <div class="stat-chip"><span class="stat-num neon-cyan">3+</span><span>YRS EXP</span></div>
+        <div class="stat-chip"><span class="stat-num neon-yellow">12+</span><span>PROJECTS</span></div>
+        <div class="stat-chip"><span class="stat-num neon-mag">8+</span><span>TECH STACK</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section reveal">
+  <div class="section-header">
+    <div class="section-tag">// 001</div>
+    <h2 class="section-title">ABOUT <span class="neon-cyan">ME</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-bio glass-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <h3 class="about-bio-title">BIO<span class="neon-yellow">.</span>TXT</h3>
+      <p>Hey there — I'm <strong class="neon-cyan">Daves Andrew</strong>, a full-stack developer based in the Philippines with a love for building systems that are both functional and beautiful.</p>
+      <p>I specialize in web development using PHP, JavaScript, and database-driven applications. Whether it's a CRUD system, decision-support tool, or disaster-response platform — I build with precision and purpose.</p>
+      <p>When I'm not coding, I'm probably rewatching Cyberpunk: Edgerunners or pushing commits at 2AM.</p>
+      <div class="bio-tags">
+        <span class="bio-tag">Problem Solver</span>
+        <span class="bio-tag">Open Source</span>
+        <span class="bio-tag">UI Obsessed</span>
+        <span class="bio-tag">Night Owl</span>
+      </div>
+    </div>
+
+    <div class="about-right-col">
+      <div class="timeline-card glass-card">
+        <div class="card-corner-tl"></div>
+        <div class="card-corner-br"></div>
+        <h3 class="about-bio-title">TIMELINE<span class="neon-yellow">.</span>LOG</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year neon-cyan">2024 — PRESENT</div>
+              <div class="tl-role">Junior Web Developer</div>
+              <div class="tl-place">Freelance / Remote</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year neon-cyan">2022 — 2024</div>
+              <div class="tl-role">BS Information Technology</div>
+              <div class="tl-place">University of the Philippines</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year neon-cyan">2021</div>
+              <div class="tl-role">First Line of Code</div>
+              <div class="tl-place">HTML + CSS Self-taught</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year neon-cyan">2019</div>
+              <div class="tl-role">Senior High School Graduate</div>
+              <div class="tl-place">ICT Strand — STEM Track</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECH STACK ===== -->
+<section id="stack" class="section reveal">
+  <div class="section-header">
+    <div class="section-tag">// 002</div>
+    <h2 class="section-title">TECH <span class="neon-cyan">STACK</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="stack-grid">
+    <div class="skill-card glass-card" data-skill="PHP" data-level="85">
+      <div class="skill-icon php-icon">
+        <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="24" rx="23" ry="23" fill="#6e4fb3" opacity="0.15"/><text x="24" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#8892BF" font-family="monospace">PHP</text></svg>
+      </div>
+      <div class="skill-name">PHP</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+      <div class="skill-pct">85%</div>
+    </div>
+
+    <div class="skill-card glass-card" data-skill="MySQL" data-level="80">
+      <div class="skill-icon">
+        <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="24" rx="23" ry="23" fill="#00aff0" opacity="0.15"/><text x="24" y="31" text-anchor="middle" font-size="9" font-weight="bold" fill="#00aff0" font-family="monospace">MySQL</text></svg>
+      </div>
+      <div class="skill-name">MySQL</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+      <div class="skill-pct">80%</div>
+    </div>
+
+    <div class="skill-card glass-card" data-skill="JavaScript" data-level="78">
+      <div class="skill-icon">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="4" fill="#f7df1e" opacity="0.15"/><text x="24" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#f7df1e" font-family="monospace">JS</text></svg>
+      </div>
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+      <div class="skill-pct">78%</div>
+    </div>
+
+    <div class="skill-card glass-card" data-skill="HTML5" data-level="92">
+      <div class="skill-icon">
+        <svg viewBox="0 0 48 48" fill="none"><polygon points="8,4 40,4 37,42 24,46 11,42" fill="#e34f26" opacity="0.15"/><text x="24" y="30" text-anchor="middle" font-size="10" font-weight="bold" fill="#e34f26" font-family="monospace">HTML5</text></svg>
+      </div>
+      <div class="skill-name">HTML5</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div>
+      <div class="skill-pct">92%</div>
+    </div>
+
+    <div class="skill-card glass-card" data-skill="CSS3" data-level="88">
+      <div class="skill-icon">
+        <svg viewBox="0 0 48 48" fill="none"><polygon points="8,4 40,4 37,42 24,46 11,42" fill="#264de4" opacity="0.15"/><text x="24" y="30" text-anchor="middle" font-size="10" font-weight="bold" fill="#264de4" font-family="monospace">CSS3</text></svg>
+      </div>
+      <div class="skill-name">CSS3</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+      <div class="skill-pct">88%</div>
+    </div>
+
+    <div class="skill-card glass-card" data-skill="VB.NET" data-level="70">
+      <div class="skill-icon">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="6" fill="#5c2d91" opacity="0.15"/><text x="24" y="30" text-anchor="middle" font-size="9" font-weight="bold" fill="#9b59b6" font-family="monospace">VB.NET</text></svg>
+      </div>
+      <div class="skill-name">VB.NET</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+      <div class="skill-pct">70%</div>
+    </div>
+
+    <div class="skill-card glass-card" data-skill="Git" data-level="82">
+      <div class="skill-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#f05032" opacity="0.15"/><text x="24" y="30" text-anchor="middle" font-size="12" font-weight="bold" fill="#f05032" font-family="monospace">Git</text></svg>
+      </div>
+      <div class="skill-name">Git</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div>
+      <div class="skill-pct">82%</div>
+    </div>
+
+    <div class="skill-card glass-card" data-skill="XAMPP" data-level="88">
+      <div class="skill-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#fb7a24" opacity="0.15"/><text x="24" y="30" text-anchor="middle" font-size="8" font-weight="bold" fill="#fb7a24" font-family="monospace">XAMPP</text></svg>
+      </div>
+      <div class="skill-name">XAMPP</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+      <div class="skill-pct">88%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section reveal">
+  <div class="section-header">
+    <div class="section-tag">// 003</div>
+    <h2 class="section-title">FEATURED <span class="neon-cyan">PROJECTS</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card glass-card reveal-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="project-badge">FEATURED</div>
+      <div class="project-icon">⚡</div>
+      <h3 class="project-title">Student Information System</h3>
+      <p class="project-desc">Full-featured CRUD system for managing student records, enrollments, grades, and faculty — built with PHP & MySQL with role-based access control.</p>
+      <div class="project-tags">
+        <span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>AJAX</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-btn proj-gh">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="proj-btn proj-live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="project-badge yellow-badge">AI-POWERED</div>
+      <div class="project-icon">🧠</div>
+      <h3 class="project-title">Decision Support System</h3>
+      <p class="project-desc">Weighted scoring DSS for academic program recommendations. Implements AHP methodology with real-time data visualization and exportable PDF reports.</p>
+      <div class="project-tags">
+        <span>PHP</span><span>JavaScript</span><span>Chart.js</span><span>MySQL</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-btn proj-gh">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="proj-btn proj-live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="project-badge mag-badge">CRITICAL</div>
+      <div class="project-icon">🚨</div>
+      <h3 class="project-title">Disaster Response System</h3>
+      <p class="project-desc">Real-time disaster monitoring and resource coordination platform with live maps, alert notifications, and volunteer management for local government units.</p>
+      <div class="project-tags">
+        <span>PHP</span><span>MySQL</span><span>LeafletJS</span><span>WebSocket</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-btn proj-gh">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="proj-btn proj-live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="project-badge">PORTFOLIO</div>
+      <div class="project-icon">🛒</div>
+      <h3 class="project-title">Inventory CRUD System</h3>
+      <p class="project-desc">Enterprise inventory management system with barcode scanning support, real-time stock alerts, analytics dashboard, and multi-user role management.</p>
+      <div class="project-tags">
+        <span>PHP</span><span>MySQL</span><span>AJAX</span><span>CSS3</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-btn proj-gh">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="proj-btn proj-live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="project-badge yellow-badge">VB.NET</div>
+      <div class="project-icon">🏥</div>
+      <h3 class="project-title">Clinic Management App</h3>
+      <p class="project-desc">Desktop application for managing patient records, appointments, prescriptions, and medical history. Built with VB.NET and SQL Server with a clean WinForms UI.</p>
+      <div class="project-tags">
+        <span>VB.NET</span><span>SQL Server</span><span>WinForms</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-btn proj-gh">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="proj-btn proj-live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="project-badge mag-badge">OPEN SOURCE</div>
+      <div class="project-icon">🌐</div>
+      <h3 class="project-title">Dev Portfolio v1</h3>
+      <p class="project-desc">First portfolio site. Clean minimal design with project showcase, contact form, and dark mode. Built with vanilla HTML/CSS/JS, fully responsive.</p>
+      <div class="project-tags">
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-btn proj-gh">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="proj-btn proj-live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== GITHUB STATS ===== -->
+<section id="stats" class="section reveal">
+  <div class="section-header">
+    <div class="section-tag">// 004</div>
+    <h2 class="section-title">GITHUB <span class="neon-cyan">STATS</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card glass-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="stat-card-header">CONTRIBUTION STREAK</div>
+      <div class="streak-display">
+        <div class="streak-num neon-yellow counter" data-target="47">0</div>
+        <div class="streak-label">DAYS</div>
+      </div>
+      <div class="streak-sub">Longest: <span class="neon-cyan">112 days</span></div>
+      <div class="flame-bar">
+        <div class="flame-seg active"></div>
+        <div class="flame-seg active"></div>
+        <div class="flame-seg active"></div>
+        <div class="flame-seg active"></div>
+        <div class="flame-seg active"></div>
+        <div class="flame-seg active"></div>
+        <div class="flame-seg active"></div>
+        <div class="flame-seg"></div>
+        <div class="flame-seg"></div>
+        <div class="flame-seg"></div>
+      </div>
+    </div>
+
+    <div class="stat-card glass-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="stat-card-header">TOTAL COMMITS</div>
+      <div class="streak-display">
+        <div class="streak-num neon-cyan counter" data-target="1284">0</div>
+      </div>
+      <div class="streak-sub">This year: <span class="neon-yellow">386 commits</span></div>
+      <div class="mini-graph" id="commit-graph"></div>
+    </div>
+
+    <div class="stat-card glass-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="stat-card-header">TOP LANGUAGES</div>
+      <div class="lang-list">
+        <div class="lang-row">
+          <span class="lang-name">PHP</span>
+          <div class="lang-bar-wrap"><div class="lang-bar" style="--w:68%;--c:#8892BF"></div></div>
+          <span class="lang-pct">68%</span>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">JavaScript</span>
+          <div class="lang-bar-wrap"><div class="lang-bar" style="--w:18%;--c:#f7df1e"></div></div>
+          <span class="lang-pct">18%</span>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">HTML/CSS</span>
+          <div class="lang-bar-wrap"><div class="lang-bar" style="--w:10%;--c:#e34f26"></div></div>
+          <span class="lang-pct">10%</span>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">VB.NET</span>
+          <div class="lang-bar-wrap"><div class="lang-bar" style="--w:4%;--c:#9b59b6"></div></div>
+          <span class="lang-pct">4%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card glass-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <div class="stat-card-header">ACTIVITY METRICS</div>
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-num neon-mag counter" data-target="24">0</div>
+          <div class="metric-label">Repos</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-num neon-cyan counter" data-target="138">0</div>
+          <div class="metric-label">Stars</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-num neon-yellow counter" data-target="18">0</div>
+          <div class="metric-label">Forks</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-num neon-mag counter" data-target="56">0</div>
+          <div class="metric-label">PRs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contribution Graph -->
+  <div class="contrib-section glass-card">
+    <div class="card-corner-tl"></div>
+    <div class="card-corner-br"></div>
+    <div class="stat-card-header">CONTRIBUTION GRAPH — 2024</div>
+    <div class="contrib-graph" id="contrib-graph"></div>
+    <div class="contrib-legend">
+      <span>LESS</span>
+      <div class="legend-box" style="background:rgba(0,245,255,0.05)"></div>
+      <div class="legend-box" style="background:rgba(0,245,255,0.2)"></div>
+      <div class="legend-box" style="background:rgba(0,245,255,0.45)"></div>
+      <div class="legend-box" style="background:rgba(0,245,255,0.7)"></div>
+      <div class="legend-box" style="background:rgba(0,245,255,1)"></div>
+      <span>MORE</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section reveal">
+  <div class="section-header">
+    <div class="section-tag">// 005</div>
+    <h2 class="section-title">CONTACT <span class="neon-cyan">ME</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info glass-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <h3 class="contact-info-title">LET'S <span class="neon-yellow">CONNECT</span></h3>
+      <p class="contact-info-desc">Available for freelance projects, collaborations, and full-time opportunities. Let's build something legendary.</p>
+      <div class="contact-details">
+        <div class="contact-detail-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>davesandrew@email.com</span>
+        </div>
+        <div class="contact-detail-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>Dagupan, Philippines</span>
+        </div>
+        <div class="contact-detail-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Available: Mon–Sat, 9AM–9PM PHT</span>
+        </div>
+      </div>
+      <a href="#" class="btn-resume">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        DOWNLOAD RESUME
+      </a>
+    </div>
+
+    <div class="contact-form-wrap glass-card">
+      <div class="card-corner-tl"></div>
+      <div class="card-corner-br"></div>
+      <h3 class="contact-info-title">SEND <span class="neon-cyan">MESSAGE</span></h3>
+      <div id="contact-form">
+        <div class="form-group">
+          <label class="form-label">NAME</label>
+          <input type="text" class="form-input" placeholder="Your name" id="f-name"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">EMAIL</label>
+          <input type="email" class="form-input" placeholder="your@email.com" id="f-email"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">SUBJECT</label>
+          <input type="text" class="form-input" placeholder="Project inquiry..." id="f-subject"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">MESSAGE</label>
+          <textarea class="form-input form-textarea" placeholder="Tell me about your project..." id="f-message"></textarea>
+        </div>
+        <button class="btn-primary full-width" id="send-btn" onclick="sendMessage()">
+          TRANSMIT MESSAGE
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <div id="form-msg" class="form-msg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="neon-cyan">D</span>AVES<span class="neon-yellow">.</span>DEV</div>
+    <div class="footer-text">Crafted with caffeine, late nights, and a lot of <span class="neon-cyan">console.log()</span></div>
+    <div class="footer-copy">© 2024 Daves Andrew. All rights reserved. // Built with HTML · CSS · JS</div>
+    <div class="footer-socials">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Facebook</a>
+      <a href="#">Discord</a>
+    </div>
+  </div>
+  <div class="footer-scan-line"></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
