@@ -88,7 +88,7 @@
 
 ## 📈 `> ACTIVITY`
 
-![snake animation](https://github.com/dibs/dibs/blob/output/github-contribution-grid-snake-dark.svg)
+![snake](https://github.com/Saitanga/Snek/blob/output/github-contribution-grid-snake-dark.svg)
 
 <br/>
 
