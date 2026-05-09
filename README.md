@@ -10,7 +10,6 @@
 
 <!-- SOCIAL BADGES -->
 [![GitHub](https://img.shields.io/badge/GitHub-Saitanga-00f5ff?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/Saitanga)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-ff2d78?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117)](https://linkedin.com)
 [![Facebook](https://img.shields.io/badge/Facebook-Follow-f0e040?style=for-the-badge&logo=facebook&logoColor=white&labelColor=0d1117)](https://facebook.com)
 [![Discord](https://img.shields.io/badge/Discord-Chat-00f5ff?style=for-the-badge&logo=discord&logoColor=white&labelColor=0d1117)](https://discord.com)
 
@@ -23,8 +22,8 @@
 
 ```
  ╔══════════════════════════════════════════════════════╗
- ║  NAME     : Saitanga                                 ║
- ║  ROLE     : Full-Stack Developer                     ║
+ ║  NAME     : Dibs                                     ║
+ ║  ROLE     : Developer                                ║
  ║  LOCATION : Philippines                              ║
  ║  STATUS   : Open to Opportunities                    ║
  ║  FOCUS    : Web Systems · CRUD · DSS · Capstone      ║
